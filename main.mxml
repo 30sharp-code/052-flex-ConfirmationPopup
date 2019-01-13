@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="vertical" xmlns:ns1="*" viewSourceURL="srcview/index.html">
+<mx:Script>
+	<![CDATA[
+		import mx.containers.TitleWindow;
+		import mx.managers.PopUpManager;
+
+		private function onclick():void
+		{
+			var confirmWindow:TitleWindow = TitleWindow(PopUpManager.createPopUp(this, ConfirmWindow, true));
+			confirmWindow.addEventListener("selectedYes",function():void{
+				lblResult.text="Yes";
+			});
+			confirmWindow.addEventListener("selectedNo",function():void{
+				lblResult.text="No";
+			});
+		}
+	]]>
+</mx:Script>	
+<mx:Label text="Result" id="lblResult"/>
+<mx:Button click="onclick();" label="Show Popup" id="btnShowConfirm"/>
+</mx:Application>

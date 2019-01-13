@@ -1,0 +1,35 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>ConfirmWindow.mxml</title>
+<link rel="stylesheet" type="text/css" href="../SourceStyles.css"/>
+</head>
+
+<body><pre><span class="mxmlCdata">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="mxmlComponent">&lt;mx:TitleWindow</span> xmlns:mx=&quot;<span class="mxmlString">http://www.adobe.com/2006/mxml</span>&quot; layout=&quot;<span class="mxmlString">absolute</span>&quot; title=&quot;<span class="mxmlString">Confirmation</span>&quot; width=&quot;<span class="mxmlString">242</span>&quot; height=&quot;<span class="mxmlString">100</span>&quot; creationComplete=&quot;doInit<span class="asBracket">()</span>;&quot;<span class="mxmlComponent">&gt;</span>
+<span class="mxmlTag">&lt;mx:Script&gt;</span>
+    <span class="asOperator">&lt;!</span><span class="asBracket">[</span>CDATA<span class="asBracket">[</span>
+        <span class="asReserved">import</span> mx.managers.PopUpManager;
+        <span class="asReserved">private</span> <span class="asFunction">function</span> doInit<span class="asBracket">()</span><span class="asOperator">:</span><span class="asReserved">void</span><span class="asBracket">{</span>
+            PopUpManager.centerPopUp<span class="asBracket">(</span><span class="asReserved">this</span><span class="asBracket">)</span>;
+        <span class="asBracket">}</span>
+        <span class="asReserved">private</span> <span class="asFunction">function</span> confirm<span class="asBracket">(</span>response<span class="asOperator">:</span>String<span class="asBracket">)</span><span class="asOperator">:</span><span class="asReserved">void</span><span class="asBracket">{</span>
+            <span class="asVar">var</span> event<span class="asOperator">:</span>Event <span class="asOperator">=</span> <span class="asReserved">new</span> Event<span class="asBracket">(</span><span class="asString">&quot;selected&quot;</span> <span class="asOperator">+</span> response<span class="asBracket">)</span>;
+            dispatchEvent<span class="asBracket">(</span>event<span class="asBracket">)</span>;
+            PopUpManager.removePopUp<span class="asBracket">(</span><span class="asReserved">this</span><span class="asBracket">)</span>;
+        <span class="asBracket">}</span>
+    <span class="asBracket">]]</span><span class="asOperator">&gt;</span>
+<span class="mxmlTag">&lt;/mx:Script&gt;</span>
+<span class="mxmlComponent">&lt;mx:VBox</span> horizontalAlign=&quot;<span class="mxmlString">center</span>&quot;<span class="mxmlComponent">&gt;</span>
+<span class="mxmlComponent">&lt;mx:Text</span> text=&quot;<span class="mxmlString">Are you sure you want to do that?</span>&quot; height=&quot;<span class="mxmlString">20</span>&quot; width=&quot;<span class="mxmlString">222</span>&quot; fontSize=&quot;<span class="mxmlString">12</span>&quot;<span class="mxmlComponent">/&gt;</span>
+<span class="mxmlComponent">&lt;/mx:VBox&gt;</span>
+<span class="mxmlComponent">&lt;mx:ControlBar</span> horizontalAlign=&quot;<span class="mxmlString">center</span>&quot;<span class="mxmlComponent">&gt;</span>
+<span class="mxmlComponent">&lt;mx:HBox&gt;</span>
+<span class="mxmlComponent">&lt;mx:Button</span> click=&quot;confirm<span class="asBracket">(</span><span class="asString">&apos;Yes&apos;</span><span class="asBracket">)</span>;&quot; label=&quot;<span class="mxmlString">Yes</span>&quot;<span class="mxmlComponent">/&gt;</span>
+<span class="mxmlComponent">&lt;mx:Button</span> click=&quot;confirm<span class="asBracket">(</span><span class="asString">&apos;No&apos;</span><span class="asBracket">)</span>;&quot; label=&quot;<span class="mxmlString">No</span>&quot;<span class="mxmlComponent">/&gt;</span>
+<span class="mxmlComponent">&lt;/mx:HBox&gt;</span>
+<span class="mxmlComponent">&lt;/mx:ControlBar&gt;</span>
+<span class="mxmlComponent">&lt;/mx:TitleWindow&gt;</span></pre></body>
+</html>

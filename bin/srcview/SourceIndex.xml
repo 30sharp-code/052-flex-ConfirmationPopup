@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+	<title>Source of Popup confirmation window</title>
+	<nodes>
+		<node label="ConfirmWindow.mxml" icon="mxmlIcon" url="source/ConfirmWindow.mxml.html"/>
+		<node selected="true" label="main.mxml" icon="mxmlAppIcon" url="source/main.mxml.html"/>
+	</nodes>
+	<zipfile label="Download source (ZIP, 2K)" url="Popup confirmation window.zip"/>
+	<sdklink label="Download Flex 2 SDK" url="http://www.adobe.com/go/flex2_sdk"/>
+</index>

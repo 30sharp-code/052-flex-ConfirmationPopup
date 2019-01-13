@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" title="Confirmation" width="242" height="100" creationComplete="doInit();">
+<mx:Script>
+	<![CDATA[
+		import mx.managers.PopUpManager;
+		private function doInit():void{
+			PopUpManager.centerPopUp(this);
+		}
+		private function confirm(response:String):void{
+			var event:Event = new Event("selected" + response);
+			dispatchEvent(event);
+			PopUpManager.removePopUp(this);
+		}
+	]]>
+</mx:Script>
+<mx:VBox horizontalAlign="center">
+<mx:Text text="Are you sure you want to do that?" height="20" width="222" fontSize="12"/>
+</mx:VBox>
+<mx:ControlBar horizontalAlign="center">
+<mx:HBox>
+<mx:Button click="confirm('Yes');" label="Yes"/>
+<mx:Button click="confirm('No');" label="No"/>
+</mx:HBox>
+</mx:ControlBar>
+</mx:TitleWindow>
